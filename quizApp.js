@@ -21,7 +21,7 @@ document.getElementById('startButton').addEventListener('click', function(event)
         nameInput.value = '';
 
         // Redirect to the quiz page
-        window.location.href = 'http://127.0.0.1:5500/quizApp/readQuizIn.html';
+        window.location.href = '/quizApp/readQuizIn.html';
     }
 });
 
