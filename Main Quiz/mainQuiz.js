@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function handleLogout() {
         localStorage.removeItem('userName');
-        window.location.href = 'http://127.0.0.1:5500/quizApp/index.html';
+        window.location.href = '/index.html';
     }
 
     function startCountdown() {
