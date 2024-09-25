@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.mainBgd {
+    background-image: url("texture.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.quizapp {
+    font-size: 2rem;
+    color: rgb(249, 220, 147);
+    font-weight: bolder;
+}
+
+ul {
+    display: flex;
+    gap: 3rem;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    background-color: rgb(151, 115, 24);
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background-color: rgb(239, 181, 34);
+}
+
+.about-container {
+    margin-top: 20px;
+    background-color: rgba(79, 60, 17, 0.8);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.about-container h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.about-container p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.about-container h3 {
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+
+.about-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-container li {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}

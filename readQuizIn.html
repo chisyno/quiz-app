@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="readQuizIn.css" />
+    <title>Read Quiz Instructions</title>
+</head>
+<body>
+
+<nav>
+    <h1 class="readIn" id="readInstructionsBtn">READ INSTRUCTIONS</h1>
+</nav>
+
+<section>
+    <div class="dottedlines" id="instructionsModal" style="display: none;">
+        <h1 class="dear">Dear Mike, please read the instruction below</h1>
+        <ul>
+            <li>This quiz in particular contains 7 questions</li>
+            <li>The first question will be displayed with a set of multiple-choice answers</li>
+            <li>Select an answer by clicking on one of the options</li>
+            <li>The app will highlight your selected answer</li>
+            <li>Click the "Next" button to go to the next question, or "Previous" to go back</li>
+            <li>You can navigate through all the questions and select your answers</li>
+            <li>Once you have completed all the questions, the "submit" button will appear</li>
+            <li>Click the "submit" button to see your score</li>
+            <li>The app will display the number of questions you answered correctly, the number of questions you answered incorrectly, and the total number of questions.</li>
+        </ul>
+        <div class="ok" id="closeBtn">OK</div>
+    </div>
+</section>
+
+<script>
+    document.getElementById('readInstructionsBtn').onclick = function() {
+    const modal = document.getElementById('instructionsModal');
+    const userName = localStorage.getItem('userName') || 'User'; // Fallback to 'User' if no name is found
+    const dearMessage = document.querySelector('.dear');
+    
+    dearMessage.textContent = `Dear ${userName}, please read the instructions below`; // Update the message
+
+    modal.style.display = 'flex';
+    modal.setAttribute('aria-hidden', 'false');
+    this.style.display = 'none'; // Hide the button
+};
+
+document.getElementById('closeBtn').onclick = function() {
+    const modal = document.getElementById('instructionsModal');
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden', 'true');
+    document.getElementById('readInstructionsBtn').style.display = 'flex'; // Show the button again
+    
+    // Redirect to the quiz page
+    window.location.href = 'http://127.0.0.1:5500/quizApp/Main%20Quiz/mainQuiz.html'; // Change this to your actual quiz page URL
+};
+
+</script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/66f1790e4cbc4814f7dd90e5/1i8fk1oti';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+</html>
+

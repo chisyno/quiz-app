@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <section class="mainBgd">
+        <nav>
+            <h1 class="quizapp">Contact Us</h1>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/quizApp/index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="http://127.0.0.1:5500/quizApp/about.html"><i class="fa-solid fa-circle-info"></i>About</a></li>
+            </ul>
+        </nav>
+        <div class="contact-container">
+            <h2>Get in Touch</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="responseMessage" style="display:none;"></div>
+        </div>
+    </section>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script src="contact.js"></script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/66f1790e4cbc4814f7dd90e5/1i8fk1oti';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+</body>
+</html>

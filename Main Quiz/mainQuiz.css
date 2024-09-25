@@ -1,0 +1,256 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background-color: rgb(231, 231, 231);
+    height: 100vh;
+}
+
+.quiz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(58, 58, 254);
+    color: white;
+    width: 100%;
+    text-align: center;
+    height: 75px;
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+.welcomeinfo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.timer {
+    font-size: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.question {
+    height: 60px;
+    width: 73%;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgb(231, 231, 231);
+    font-size: 17px;
+    font-weight: bolder;
+    padding-left: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.answers h1 {
+    height: 35px;
+    width: 68rem;
+    border: 1px solid gray;
+    font-weight: 400;
+    font-size: 16.5px;
+    padding-left: 1.2rem;
+    margin-bottom: -11.5px;
+    display: flex;
+    align-items: center;
+}
+
+.answers h1:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+hr {
+    margin-top: 1.2rem;
+}
+
+.click {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 10px;
+    color: white;
+}
+
+.click h1 {
+    font-weight: 400;
+    height: 45px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1px;
+}
+
+.click h1:hover {
+    cursor: pointer;
+}
+
+#prev {
+    background-color: red;
+}
+
+#next {
+    background-color: rgb(52, 52, 253);
+}
+
+#submit {
+    background-color: gray;
+}
+
+#logout {
+    background-color: green;
+}
+
+#result-text {
+
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    width: 73%;
+    font-size: 17px;
+    font-weight: bolder;
+    padding-left: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+.stat {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: -35px;
+  }
+
+#fail {
+    background-color: red;
+    height: 38px;
+    width: 11rem;
+    font-size: 18px;
+    padding-top: 8px;
+    padding-left: 10px;
+}
+
+#pass {
+    background-color: green;
+    height: 38px;
+    width: 11rem;
+    font-size: 18px;
+    padding-top: 8px;
+    padding-left: 10px;
+}
+
+#total {
+    background-color: rgb(51, 51, 252);
+    height: 38px;
+    width: 11rem;
+    font-size: 18px;
+    padding-top: 8px;
+    padding-left: 10px;
+}
+
+.finish {
+    width: 73%;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgb(231, 231, 231);
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.finish h1 {
+    margin-left: 20px;
+}
+
+.time-up-message {
+    color: red; 
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.finalresult {
+    color: green;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.finalresults {
+    color: black;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.submit-container {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .quiz {
+        font-size: 24px;
+        height: 60px;
+    }
+
+    .welcomeinfo {
+        flex-direction: column;
+        font-size: 12px;
+    }
+
+    .question {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .answers h1 {
+        width: 90%;
+        font-size: 12px;
+    }
+
+    .click h1 {
+        width: 80px;
+        font-size: 12px;
+    }
+
+    #prev, #next, #submit, #logout {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    #result-text {
+        font-size: 20px;
+    }
+
+    .result {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .finish {
+        width: 90%;
+    }
+
+    .time-up-message, .finalresult, .finalresults {
+        font-size: 14px;
+    }
+    .submit-container {
+    width: 100%;
+    }
+}
+
+
