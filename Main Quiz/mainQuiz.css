@@ -98,11 +98,11 @@ hr {
 }
 
 #prev {
-    background-color: red;
+    background-color: rgb(69, 45, 45);
 }
 
 #next {
-    background-color: rgb(52, 52, 253);
+    background-color: rgba(79, 60, 17, 0.8);
 }
 
 #submit {
@@ -110,7 +110,7 @@ hr {
 }
 
 #logout {
-    background-color: green;
+    background-color: goldenrod;
 }
 
 #result-text {
@@ -145,7 +145,7 @@ hr {
     height: 38px;
     width: 11rem;
     font-size: 18px;
-    padding-top: 8px;
+    padding-top: 15px;
     padding-left: 10px;
 }
 
@@ -154,7 +154,7 @@ hr {
     height: 38px;
     width: 11rem;
     font-size: 18px;
-    padding-top: 8px;
+    padding-top: 15px;
     padding-left: 10px;
 }
 
@@ -163,7 +163,7 @@ hr {
     height: 38px;
     width: 11rem;
     font-size: 18px;
-    padding-top: 8px;
+    padding-top: 15px;
     padding-left: 10px;
 }
 
@@ -209,17 +209,17 @@ hr {
 
     .welcomeinfo {
         flex-direction: column;
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .question {
         width: 90%;
-        font-size: 14px;
+        font-size: 10px;
     }
 
     .answers h1 {
         width: 90%;
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .click h1 {
@@ -229,7 +229,7 @@ hr {
 
     #prev, #next, #submit, #logout {
         width: 100%;
-        font-size: 16px;
+        font-size: 11px;
     }
 
     #result-text {
@@ -241,15 +241,31 @@ hr {
         font-size: 16px;
     }
 
+    #fail {
+        font-size: 0.8rem;
+    }
+    #pass{
+        font-size: 0.8rem;
+    }
+
+    #total {
+        font-size: 0.8rem;
+    }
+
     .finish {
         width: 90%;
     }
 
     .time-up-message, .finalresult, .finalresults {
-        font-size: 14px;
+        font-size: 11px;
     }
     .submit-container {
     width: 100%;
+    font-size: 0.9rem;
+    }
+
+    .Submitted {
+        font-size: 14px;
     }
 }
 

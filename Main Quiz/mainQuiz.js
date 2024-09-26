@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         timerElement.innerHTML = isTimeUp 
             ? '<span class="time-up-message">Your time is up!</span>' 
-            : "Submitted";
+            : '<span class="Submitted">Submitted</span>'
 
         clearInterval(countdown);
 
