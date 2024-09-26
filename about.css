@@ -84,3 +84,29 @@ a:hover {
     margin: 5px 0;
     font-size: 1.1rem;
 }
+
+@media (max-width: 768px) {
+    .quizapp {
+        font-size: 17px;
+    }
+
+    a {
+        font-size: 13px;
+    }
+
+    .about-container h2 {
+        font-size: 18px;
+    }
+
+    .about-container p {
+        font-size: 10px;
+    }
+
+    .about-container h3 {
+        font-size: 18px;
+    }
+
+    .about-container ul li {
+        font-size: 10px;
+    }
+}

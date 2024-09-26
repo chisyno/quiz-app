@@ -75,7 +75,7 @@ input, textarea {
 }
 
 button {
-    background-color: rgb(79, 60, 17);
+    background-color: goldenrod;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -85,5 +85,19 @@ button {
 }
 
 button:hover {
-    background-color: goldenrod;
+    background-color: rgb(124, 95, 21);
+}
+
+@media (max-width: 768px) {
+    .quizapp {
+        font-size: 17px;
+    }
+
+    a {
+        font-size: 13px;
+    }
+
+    .contact-container h2 {
+        font-size: 18px;
+    }
 }
