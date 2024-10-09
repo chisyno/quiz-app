@@ -115,8 +115,6 @@ hr {
 
 #show-result {
     background-color: rgba(79, 60, 17, 0.8);
-    display: flex;
-    justify-content: center;
     place-content: center;
     text-align: center;
 }
