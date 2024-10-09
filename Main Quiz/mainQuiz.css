@@ -113,6 +113,17 @@ hr {
     background-color: goldenrod;
 }
 
+#show-result {
+    background-color: rgba(79, 60, 17, 0.8);
+    display: flex;
+    place-content: center;
+    text-align: center;
+}
+
+h2 {
+    font-size: 18px;
+}
+
 #result-text {
 
     font-size: 24px;
@@ -131,6 +142,7 @@ hr {
     display: flex;
     align-items: center;
 }
+
 .stat {
     width: 100%;
     display: flex;
@@ -227,9 +239,18 @@ hr {
         font-size: 12px;
     }
 
-    #prev, #next, #submit, #logout {
+    #prev, #next, #submit, #logout, #show-result {
         width: 100%;
         font-size: 11px;
+    }
+
+    h2 {
+        font-size: 12px;
+    }
+
+    ul {
+        font-size: 10px;
+        margin-bottom: 30px;
     }
 
     #result-text {

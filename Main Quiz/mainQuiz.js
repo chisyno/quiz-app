@@ -77,6 +77,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const timerElement = document.querySelector(".timer");
     const finishMessage = document.querySelector(".finish");
 
+    // Arrays to store correctly and incorrectly answered questions
+    let correctAnswers = [];
+    let incorrectAnswers = [];
+
     function loadQuestion() {
         const question = questions[currentQuestionIndex];
         questionElement.textContent = question.question;
@@ -111,6 +115,20 @@ document.addEventListener("DOMContentLoaded", () => {
     function handleSubmit(isTimeUp = false) {
         handleAnswerSelection();
 
+        // Reset arrays for each submission
+        correctAnswers = [];
+        incorrectAnswers = [];
+
+        // Populate the arrays based on the selected answers
+        selectedAnswers.forEach((answer, index) => {
+            if (answer === questions[index].correctAnswer) {
+                correctAnswers.push(questions[index]);
+            } else {
+                incorrectAnswers.push(questions[index]);
+            }
+        });
+
+        // Existing code for handling time up and submission
         if (isTimeUp) {
             const allAnswered = selectedAnswers.length === questions.length;
             if (allAnswered) {
@@ -118,18 +136,21 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 finishMessage.innerHTML = `<div class="finalresults"><h1>Time Up! You didn't finish the questions. Click Submit.</h1></div>`;
             }
-            resultElement.style.display = "none"; // Hide result element when time is up
-            document.querySelector('.submit-container').style.display = "block"; // Show submit container when time is up
+            resultElement.style.display = "none"; 
+            document.querySelector('.submit-container').style.display = "block"; 
         } else {
             finishMessage.innerHTML = `<div class="finalresult"><h1>YOU HAVE SUCCESSFULLY SUBMITTED!!</h1></div>`;
-            resultElement.style.display = "block"; // Show result element on normal submit
-            document.querySelector('.submit-container').style.display = "none"; // Hide submit container on normal submit
+            resultElement.style.display = "block"; 
+            document.querySelector('.submit-container').style.display = "none"; 
+
+            // Show the Show Result button
+            document.getElementById("show-result").style.display = "block";
         }
         finishMessage.style.display = "block";
 
         timerElement.innerHTML = isTimeUp 
             ? '<span class="time-up-message">Your time is up!</span>' 
-            : '<span class="Submitted">Submitted</span>'
+            : '<span class="Submitted">Submitted</span>';
 
         clearInterval(countdown);
 
@@ -141,10 +162,10 @@ document.addEventListener("DOMContentLoaded", () => {
         answersElement.style.display = "none";
         prevButton.style.display = "none";
         nextButton.style.display = "none";
-        document.querySelector('.submit-container').style.display = "none"; // Hide submit container during normal submission
+        document.querySelector('.submit-container').style.display = "none"; 
 
         if (!isTimeUp) {
-            resultElement.style.display = "block"; // Show result element if submitted normally
+            resultElement.style.display = "block"; 
             const stat = document.querySelector(".stat");
             stat.innerHTML = `
                 <h1 id="fail">Failed: ${questions.length - score}</h1>
@@ -166,20 +187,35 @@ document.addEventListener("DOMContentLoaded", () => {
             if (timeLeft <= 0) {
                 clearInterval(countdown);
                 document.querySelectorAll('input[name="answer"]').forEach(input => {
-                    input.disabled = true; // Disable input when time is up
+                    input.disabled = true; 
                 });
-                handleSubmit(true); // Indicate time is up
-                document.querySelector('.submit-container').style.display = "block"; // Show submit container when time is up
+                handleSubmit(true); 
+                document.querySelector('.submit-container').style.display = "block"; 
             }
         }, 1000);
     }
 
     prevButton.addEventListener("click", handlePrevQuestion);
     nextButton.addEventListener("click", handleNextQuestion);
-    submitButton.addEventListener("click", () => handleSubmit(false)); // Normal submit
+    submitButton.addEventListener("click", () => handleSubmit(false)); 
     logoutButton.addEventListener("click", handleLogout);
+
+    // Show Result button click event
+    document.getElementById("show-result").addEventListener("click", () => {
+        resultElement.innerHTML = `
+            <h2>Correctly Answered Questions:</h2>
+            <ul>
+                ${correctAnswers.map(q => `<li>${q.question} - Correct Answer: ${q.correctAnswer}</li>`).join('')}
+            </ul>
+            <h2>Incorrectly Answered Questions:</h2>
+            <ul>
+                ${incorrectAnswers.map(q => `<li>${q.question} - Your Answer: ${selectedAnswers[questions.indexOf(q)] || 'No answer'} - Correct Answer: ${q.correctAnswer}</li>`).join('')}
+            </ul>
+        `;
+        
+        resultElement.style.display = "block"; 
+    });
 
     loadQuestion();
     startCountdown();
 });
-
